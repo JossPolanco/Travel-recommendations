@@ -3,45 +3,60 @@
 {%block title%}Test{%endblock%}
 
 {%block content%}
-<h1>Where would you like to go?</h1>
+<h1>Vamos a ir a....?</h1>
 <div class="row">
     <form class="col s12">
         <div class="row">
             <div class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <i class="material-icons prefix">airplanemode_active</i>
+                        <i class="material-icons prefix">place</i>
                         <input type="text" id="origin" class="origin_autocomplete" required>
-                        <label for="origin">Origin</label>
+                        <label for="origin">Origen</label>
                     </div>
                     <div class="input-field col s6">
-                        <i class="material-icons prefix">assistant_photo</i>
-                        <input type="text" id="destiny" class="destiny_autocomplete" required>
-                        <label for="destiny">Destiny</label>
+                        <i class="material-icons prefix">pin_drop</i>
+                        <input type="text" id="place" class="place_autocomplete" required>
+                        <label for="place">Lugar</label>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <i class="material-icons prefix">date_range</i>
-                <input type="text" id="date" class="datepicker" required>
-                <label for="date">Start date</label>
+                <i class="material-icons prefix">assistant_photo</i>
+                <input id="distance" type="number" class="validate" min="1" required>
+                <label for="distance">Distancia</label>
             </div>
             <div class="input-field col s6">
-                <i class="material-icons prefix">date_range</i>
-                <input type="text" id="date" class="datepicker" required>
-                <label for="date">Finish date</label>
+                <i class="material-icons prefix">attach_money</i>
+                <input id="budget" type="number" class="validate" min="50" required>
+                <label for="budget">Presupuesto</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
-                <input id="guest" type="number" class="validate" min="1" max="15" required>
-                <label for="guest">Guest</label>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">cloud</i>                
+                <select class="weather_select" required>
+                    <option value="" disabled selected>Escoge un clima</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="seco">Seco</option>
+                    <option value="templado">Templado</option>
+                </select>
             </div>
-        </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">date_range</i>                
+                <select class="season_select" required>
+                    <option value="" disabled selected>Escoge una temporada</option>
+                    <option value="1">Primavera</option>
+                    <option value="2">Verano</option>
+                    <option value="3">Otoño</option>
+                    <option value="3">Invierno</option>
+                </select>
+            </div>
+        </div>    
         <div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button class="btn waves-effect waves-light" type="submit" name="action">Buscar
                 <i class="material-icons right">send</i>
             </button>
         </div>

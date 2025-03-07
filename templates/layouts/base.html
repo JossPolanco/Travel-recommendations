@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,56 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 </head>
-<body> 
-    <div class="container">{%block content %}{% endblock %}</div>   
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">Josué</a></li>
+                    <li><a href="">Ángel</a></li>
+                    <li><a href="">Pérez</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">{%block content %}{% endblock %}</div>
+
+
+    <!-- <footer>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Josué Ángel Pérez Polanco</h5>
+                        <p class="grey-text text-lighten-4">.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">.</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </footer> -->
 </body>
 <!-- JS of Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Js of the project -->
 <script src="/static/js/javascript.js"></script>
+
 </html>
