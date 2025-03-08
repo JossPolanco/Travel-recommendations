@@ -2,3 +2,4 @@
 /.vscode
 /config/__pycache__
 /routes/__pycache__
+/routes/__init__.py
