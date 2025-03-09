@@ -1,11 +1,44 @@
-*{
+*{    
     margin: 0rem;
     padding: 0rem;
+    border: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 html{
     font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+.place-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #0b1422;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.place-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.place-weather {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+.place-info {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.6;
+}
+.place-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }

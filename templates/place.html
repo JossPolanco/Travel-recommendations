@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="place-container">
+    <h1 class="place-title">{{ place['name'] }}</h1>
+    <h2 class="place-weather">{{ place['weather'] }}</h2>    
+    <img src="{{ place['img']}}" alt="{{ place['name'] }}" class="place-image">
+    <p class="place-info">{{ place['information'] }}</p>
+</div>
+{% endblock %}
