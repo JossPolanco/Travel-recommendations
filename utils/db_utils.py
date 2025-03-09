@@ -1,4 +1,4 @@
-from config.db import mysql, jsonify
+from config.db import mysql
 
 # Function that returns the cursor 
 def get_cursor():
@@ -15,6 +15,6 @@ def get_section_data(table):
         data = cur.fetchall()
         result = list(data)
         cur.close()
-        return jsonify(result)
+        return result
     except KeyError as e:
         print(f"{e}")

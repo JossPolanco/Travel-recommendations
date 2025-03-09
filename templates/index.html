@@ -11,12 +11,12 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">place</i>
-                        <input type="text" id="origin" class="origin_autocomplete" name="origin" required>
+                        <input type="text" id="origin" class="origin_autocomplete" name="origin" autocomplete="off" required>
                         <label for="origin">Origen</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">pin_drop</i>
-                        <input type="text" id="place" class="place_autocomplete" name="place" required>
+                        <input type="text" id="place" class="place_autocomplete" name="place" autocomplete="off">
                         <label for="place">Lugar</label>
                     </div>
                 </div>
@@ -25,19 +25,19 @@
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">assistant_photo</i>
-                <input id="distance" type="number" class="validate" name="distance" min="1" required>
+                <input id="distance" type="number" class="validate" name="distance" min="1">
                 <label for="distance">Distancia</label>
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">attach_money</i>
-                <input id="budget" type="number" class="validate" name="budget" min="50" required>
+                <input id="budget" type="number" class="validate" name="budget" min="50">
                 <label for="budget">Presupuesto</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">cloud</i>                
-                <select class="weather_select" name="weather" required>
+                <select class="weather_select" name="weather">
                     <option value="" disabled selected>Escoge un clima</option>
                     <option value="Caluroso">Caluroso</option>
                     <option value="Frio">Frio</option>
@@ -60,7 +60,7 @@
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">date_range</i>                
-                <select class="season_select" name="season" required>
+                <select class="season_select" name="season">
                     <option value="" disabled selected>Escoge una temporada</option>
                     <option value="Enero-Marzo">Enero-Marzo</option>
                     <option value="Abril-Junio">Abril-Junio</option>

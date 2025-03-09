@@ -1,5 +1,7 @@
 /.venv
 /.vscode
 /config/__pycache__
+/models/__pycache__
 /routes/__pycache__
-/routes/__init__.py
+/services/__pycache__
+/utils/__pycache__

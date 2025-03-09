@@ -1,11 +1,12 @@
-from flask import request, jsonify
+from flask import request
+from models.places_model import PlacesModel
 
 def get_general_info():
-    try:     
-        # Debug to know the info brough
+    try:
+        # Debug to know the info brought
         print("Content of request.form:", request.form)
         
-        # Save all the info brough into variables
+        # Save all the info brought from the form into variables
         origin = request.form["origin"]
         place = request.form["place"]
         distance = request.form["distance"]
@@ -14,7 +15,7 @@ def get_general_info():
         season = request.form["season"]
         
         # Dictionary of the data
-        recommendation = {
+        specifications = {
             'origin': origin,
             'place': place,
             'distance': distance,
@@ -23,10 +24,14 @@ def get_general_info():
             'season': season
         }
         # Debug
-        print("Successful search.", recommendation)
-        # Converts the dictionray in json
-        jsonify(recommendation)
-        # Returns the json
-        return recommendation
+        print("Successful search.", specifications)
+        
+        # We create an object if the model to acces its methods
+        places_model = PlacesModel()
+        # We pass each value provided by the user to the method to select all the places that matches with the values in the db
+        recommendations = places_model.get_places_by_info(specifications["place"], specifications["distance"], specifications["budget"], specifications["weather"], specifications["season"])
+        # Returns all the places
+        return recommendations
     except KeyError as e:
-        print(f"{e}")        
+        print(f"{e}")
+        return []
