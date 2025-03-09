@@ -24,6 +24,22 @@ class PlacesModel:
             print(f"Error: {e}.")
         finally:
             self.closeCursor()
+    # Method to get places by id
+    def get_places_by_id(self, id):
+        try:
+            self.openCursor()
+            query = "SELECT * FROM places WHERE id = %s"
+            values = (id,)
+            self.cur.execute(query, values)
+            result = self.cur.fetchone()
+            if result:
+                columns = [col[0] for col in self.cur.description]
+                result = dict(zip(columns, result))
+            return result
+        except KeyError as e:
+            print(f"Error: {e}.")
+        finally:
+            self.closeCursor()
     # Method to get all the places limited by a number
     def get_places_limited(self, limit):
         try:
