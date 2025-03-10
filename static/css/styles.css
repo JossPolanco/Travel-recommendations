@@ -1,15 +1,190 @@
-*{    
-    margin: 0rem;
-    padding: 0rem;
-    border: 0;
-    box-sizing: border-box;
-    list-style: none;
+*{
+    margin: 0px;
 }
 
 html{
-    font-size: 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    size: 100px;
+    background-color: #0f0f0f;
+    color: #e4e4e4;
+}
+body{
+    font-family: 'Lora', serif;
+    display: flex;
+    flex-direction: column;
+    color: #e4e4e4;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.nav_navegator{
+    margin-bottom: 100px;
+}
+/* All content page */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/* The container of the form */
+.form_container{
+    width: 100%;    
+    border-radius: 12px;
+    background-image: linear-gradient(to right top, #ffe066, #ff6f55, #e932da);
+    padding: 15px;
+}
 
+.form_container_span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.form_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.search_btn_container{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    width: 180px;
+    height: 70px;
+    border: none;
+    border-radius: 6px;
+    background-image: linear-gradient(to right top, #ff6f55, #e932da);
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search_btn i {
+    font-size: 24px;
+}
+
+.search_btn_span{      
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.search_btn_span:hover {
+    background: none;
+    transition: .3s;
+}
+.material-icons {
+    margin-top: 3px;
+}
+
+/* Input field styles */
+.input-field input, .input-field select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    background-color: #333;
+    color: #fff; /* Color del texto */
+}
+
+.input-field input::placeholder, .input-field select::placeholder {
+    color: #ccc; /* Color del placeholder */
+}
+
+.input-field label {
+    color: #ccc;
+}
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #0f0f0f;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    width: auto;
+    margin: 80px auto;
+    padding: 20px;
+    background-image: linear-gradient(
+        150deg,
+        #1EADF0,
+        #0AFB60
+    );
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container_span{
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.input-field {
+    margin-bottom: 20px;
+}
+.input-field i {
+    color: #fff;
+}
+.input-field label {
+    color: #ccc;
+}
+.input-field input, .input-field select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    background-color: #333;
+    color: #fff;
+}
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .place-container {
@@ -17,23 +192,23 @@ html{
     margin: 0 auto;
     margin-top: 50px;
     padding: 20px;
-    background-color: #0b1422;
+    background-color: #e9edf3;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .place-title {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
 }
 .place-weather {
     font-size: 1.2em;
-    color: #666;
+    color: #ccc;
     margin-bottom: 20px;
 }
 .place-info {
     font-size: 1.1em;
-    color: #444;
+    color: #ddd;
     line-height: 1.6;
 }
 .place-image {
@@ -41,4 +216,4 @@ html{
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-}
+} */

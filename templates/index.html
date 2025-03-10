@@ -3,79 +3,83 @@
 {%block title%}Test{%endblock%}
 
 {%block content%}
-<h1>Vamos a ir a....?</h1>
-<div class="row">
-    <form class="col s12" action="/search" method="POST">
+
+<div class="form_container">
+    <div class="form_container_span">
         <div class="row">
-            <div class="col s12">
+            <h2 class="form_title">Explora el mundo según tus preferencias</h2>
+            <form class="col s12" action="/search" method="POST">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">place</i>
-                        <input type="text" id="origin" class="origin_autocomplete" name="origin" autocomplete="off" required>
-                        <label for="origin">Origen</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">pin_drop</i>
-                        <input type="text" id="place" class="place_autocomplete" name="place" autocomplete="off">
-                        <label for="place">Lugar</label>
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">place</i>
+                                <input type="text" id="origin" class="origin_autocomplete" name="origin" autocomplete="off"
+                                    required>
+                                <label for="origin">Origen</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">pin_drop</i>
+                                <input type="text" id="place" class="place_autocomplete" name="place" autocomplete="off">
+                                <label for="place">Lugar</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">assistant_photo</i>
+                        <input id="distance" type="number" class="validate" name="distance" min="1">
+                        <label for="distance">Distancia</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">attach_money</i>
+                        <input id="budget" type="number" class="validate" name="budget" min="50">
+                        <label for="budget">Presupuesto</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">cloud</i>
+                        <select class="weather_select" name="weather">
+                            <option value="" disabled selected>Clima</option>
+                            <option value="Caluroso">Caluroso</option>
+                            <option value="Frio">Frio</option>
+                            <option value="Templado">Templado</option>
+                            <option value="Nieve">Nieve</option>
+                            <option value="Lluvioso">Lluvioso</option>
+                            <option value="Seco">Seco</option>
+                            <option value="Cálido">Cálido</option>
+                            <option value="Tropical">Tropical</option>
+                            <option value="Húmedo">Húmedo</option>
+                            <option value="Soleado">Soleado</option>
+                            <option value="Fresco por las noches">Fresco por las noches</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Variable">Variable</option>
+                            <option value="Fresco en altura">Fresco en altura</option>
+                            <option value="Cálido en el fondo">Cálido en el fondo</option>
+                            <option value="Semiárido">Semiárido</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">date_range</i>
+                        <select class="season_select" name="season">
+                            <option value="" disabled selected>Temporada</option>
+                            <option value="Enero-Marzo">Enero-Marzo</option>
+                            <option value="Abril-Junio">Abril-Junio</option>
+                            <option value="Julio-Septiembre">Julio-Septiembre</option>
+                            <option value="Octubre-Diciembre">Octubre-Diciembre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search_btn_container">
+                    <button class="search_btn" type="submit">
+                        <span class="search_btn_span">Buscar<i class="material-icons prefix">send</i></span>
+                    </button>
+                </div>
+            </form>
         </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">assistant_photo</i>
-                <input id="distance" type="number" class="validate" name="distance" min="1">
-                <label for="distance">Distancia</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">attach_money</i>
-                <input id="budget" type="number" class="validate" name="budget" min="50">
-                <label for="budget">Presupuesto</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">cloud</i>                
-                <select class="weather_select" name="weather">
-                    <option value="" disabled selected>Escoge un clima</option>
-                    <option value="Caluroso">Caluroso</option>
-                    <option value="Frio">Frio</option>
-                    <option value="Templado">Templado</option>
-                    <option value="Nieve">Nieve</option>
-                    <option value="Lluvioso">Lluvioso</option>
-                    <option value="Seco">Seco</option>
-                    <option value="Cálido">Cálido</option>
-                    <option value="Tropical">Tropical</option>
-                    <option value="Húmedo">Húmedo</option>
-                    <option value="Soleado">Soleado</option>
-                    <option value="Fresco por las noches">Fresco por las noches</option>
-                    <option value="Moderado">Moderado</option>
-                    <option value="Variable">Variable</option>
-                    <option value="Fresco en altura">Fresco en altura</option>
-                    <option value="Cálido en el fondo">Cálido en el fondo</option>
-                    <option value="Semiárido">Semiárido</option>
-                </select>
-                <label>Clima</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">date_range</i>                
-                <select class="season_select" name="season">
-                    <option value="" disabled selected>Escoge una temporada</option>
-                    <option value="Enero-Marzo">Enero-Marzo</option>
-                    <option value="Abril-Junio">Abril-Junio</option>
-                    <option value="Julio-Septiembre">Julio-Septiembre</option>
-                    <option value="Octubre-Diciembre">Octubre-Diciembre</option>
-                </select>
-                <label>Temporada</label>
-            </div>
-        </div>    
-        <div>
-            <button class="btn waves-effect waves-light" type="submit">Buscar
-                <i class="material-icons right">send</i>
-            </button>
-        </div>
-    </form>
+    </div>
 </div>
 
 {%endblock%}

@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="nav_navegator">
             <div class="nav-wrapper">
                 <a href="" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -67,5 +67,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Js of the project -->
 <script src="/static/js/javascript.js"></script>
+<!-- JS of Mapkick -->
+<script src="{{ url_for('mapkick.static', filename='mapkick.bundle.js') }}"></script>
 
 </html>
