@@ -12,7 +12,6 @@ def go_place(place_id):
     # We access to its method to bring all data o the place by id
     place = place_model.get_places_by_id(place_id)    
     
-    mapkick_api_key = current_app.config['MAPKICK_API_KEY']
-    map = Map([{'latitude': place['latitude'], 'longitude': place['longitude']}], api_key=mapkick_api_key)
+    map = Map([{'latitude': place['latitude'], 'longitude': place['longitude']}])
     # We render the page and pass it all data
-    return render_template("place.html", place=place, map=map, mapkick_api_key=mapkick_api_key)
+    return render_template("place.html", place=place, map=map, zoom=150, mapbox_token=current_app.config["MAPBOX_ACCESS_TOKEN"])

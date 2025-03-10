@@ -10,12 +10,12 @@ load_dotenv()
 app = Flask(__name__)
 mysql = init_db(app)
 
-app.config['MAPKICK_API_KEY'] = os.getenv('MAPKICK_API_KEY')
+app.config['MAPBOX_ACCESS_TOKEN'] = os.getenv('MAPBOX_ACCESS_TOKEN')
 
+app.register_blueprint(mapkick_blueprint)
 app.register_blueprint(index.bp)
 app.register_blueprint(search.bp)
 app.register_blueprint(place.bp)
-app.register_blueprint(mapkick_blueprint)
 
 
 if __name__ == "__main__":
