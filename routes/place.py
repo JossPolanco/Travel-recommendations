@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, current_app
 from models.places_model import PlacesModel
 from mapkick.flask import Map
 
@@ -10,8 +10,9 @@ def go_place(place_id):
     # We create an object if the model to acces its methods
     place_model = PlacesModel()
     # We access to its method to bring all data o the place by id
-    place = place_model.get_places_by_id(place_id)
+    place = place_model.get_places_by_id(place_id)    
     
-    map = Map([{'latitude': place['latitude'], 'longitude': place['longitude']}])
+    mapkick_api_key = current_app.config['MAPKICK_API_KEY']
+    map = Map([{'latitude': place['latitude'], 'longitude': place['longitude']}], api_key=mapkick_api_key)
     # We render the page and pass it all data
-    return render_template("place.html", place=place, map=map)
+    return render_template("place.html", place=place, map=map, mapkick_api_key=mapkick_api_key)

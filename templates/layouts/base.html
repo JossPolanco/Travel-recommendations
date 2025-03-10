@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
     <!-- CSS of project -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
@@ -29,45 +31,15 @@
         </nav>
     </header>
 
-
     <div class="container">
         {%block content %}{% endblock %}
     </div>
 
-
-    <!-- <footer>
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Josué Ángel Pérez Polanco</h5>
-                        <p class="grey-text text-lighten-4">.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">.</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">.</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
-            </div>
-        </footer>
-    </footer> -->
 </body>
 <!-- JS of Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- JS of Mapkick -->
+<script src="https://unpkg.com/mapkick/bundle/mapkick.bundle.js"></script>
 <!-- Js of the project -->
 <script src="/static/js/javascript.js"></script>
-<!-- JS of Mapkick -->
-<script src="{{ url_for('mapkick.static', filename='mapkick.bundle.js') }}"></script>
-
 </html>
