@@ -19,13 +19,11 @@
 
 <body>
     <header>
-        <nav class="nav_navegator">
+        <nav class="nav_navegator gradient-navbar">
             <div class="nav-wrapper">
                 <a href="" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="">Josué</a></li>
-                    <li><a href="">Ángel</a></li>
-                    <li><a href="">Pérez</a></li>
+                    <li><a href="{{ url_for('index.index') }}">INICIO</a></li>                    
                 </ul>
             </div>
         </nav>
@@ -39,7 +37,7 @@
 <!-- JS of Materialize -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JS of Mapkick -->
-<script src="{{ url_for('static', filename='js/mapbox.js') }}" defer></script>\
+<script src="{{ url_for('static', filename='js/mapbox.js') }}" defer></script>
 <script src="{{ url_for('static', filename='js/mapbox-gl.js') }}" defer></script>
 <script src="{{ url_for('static', filename='js/mapkick.js') }}" defer></script>
 <!-- Js of the project -->

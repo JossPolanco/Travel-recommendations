@@ -1,81 +1,100 @@
 {%extends 'layouts/base.html' %}
 
-{%block title%}Test{%endblock%}
+{%block title%}Descubre Tu Próximo Destino{%endblock%}
 
 {%block content%}
 
-<div class="form_container">
-    <div class="form_container_span">
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Descubre el mundo a tu manera</h1>
+        <p class="hero-subtitle">Encuentra destinos que se adapten a tus preferencias, presupuesto y temporada ideal</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="content_span">
         <div class="row">
-            <h2 class="form_title">Explora el mundo según tus preferencias</h2>
+            <h4 class="form_title">¿A dónde quieres ir hoy?</h4>
             <form class="col s12" action="/search" method="POST">
                 <div class="row">
                     <div class="col s12">
                         <div class="row">
                             <div class="input-field col s6">
-                                <i class="material-icons prefix">place</i>
-                                <input type="text" id="origin" class="origin_autocomplete" name="origin" autocomplete="off"
-                                    required>
-                                <label for="origin">Origen</label>
+                                <i class="material-icons prefix">flight_takeoff</i>
+                                <input type="text" id="origin" class="origin_autocomplete" name="origin" autocomplete="off" required>
+                                <label for="origin">Tu ubicación actual</label>
                             </div>
                             <div class="input-field col s6">
-                                <i class="material-icons prefix">pin_drop</i>
-                                <input type="text" id="place" class="place_autocomplete" name="place" autocomplete="off">
-                                <label for="place">Lugar</label>
+                                <i class="material-icons prefix">flight_land</i>
+                                <input type="text" id="place" class="place_autocomplete" name="place" autocomplete="off" required>
+                                <label for="place">¿A dónde te gustaría ir?</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">assistant_photo</i>
-                        <input id="distance" type="number" class="validate" name="distance" min="1">
-                        <label for="distance">Distancia</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">attach_money</i>
-                        <input id="budget" type="number" class="validate" name="budget" min="50">
-                        <label for="budget">Presupuesto</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">cloud</i>
-                        <select class="weather_select" name="weather">
-                            <option value="" disabled selected>Clima</option>
-                            <option value="Caluroso">Caluroso</option>
-                            <option value="Frio">Frio</option>
-                            <option value="Templado">Templado</option>
-                            <option value="Nieve">Nieve</option>
-                            <option value="Lluvioso">Lluvioso</option>
-                            <option value="Seco">Seco</option>
-                            <option value="Cálido">Cálido</option>
-                            <option value="Tropical">Tropical</option>
-                            <option value="Húmedo">Húmedo</option>
-                            <option value="Soleado">Soleado</option>
-                            <option value="Fresco por las noches">Fresco por las noches</option>
-                            <option value="Moderado">Moderado</option>
-                            <option value="Variable">Variable</option>
-                            <option value="Fresco en altura">Fresco en altura</option>
-                            <option value="Cálido en el fondo">Cálido en el fondo</option>
-                            <option value="Semiárido">Semiárido</option>
-                        </select>
-                    </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">date_range</i>
-                        <select class="season_select" name="season">
-                            <option value="" disabled selected>Temporada</option>
-                            <option value="Enero-Marzo">Enero-Marzo</option>
-                            <option value="Abril-Junio">Abril-Junio</option>
-                            <option value="Julio-Septiembre">Julio-Septiembre</option>
-                            <option value="Octubre-Diciembre">Octubre-Diciembre</option>
-                        </select>
+                
+                <div class="form-section">
+                    <div class="section-title">Detalles de tu viaje</div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">explore</i>
+                            <input id="distance" type="number" class="validate" name="distance" min="1" required>
+                            <label for="distance">Distancia máxima (km)</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_balance_wallet</i>
+                            <input id="budget" type="number" class="validate" name="budget" min="50" required>
+                            <label for="budget">Presupuesto (MXN)</label>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="form-section">
+                    <div class="section-title">Preferencias climatológicas</div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">wb_sunny</i>
+                            <select class="weather_select" name="weather" required>
+                                <option value="" disabled selected>¿Qué clima prefieres?</option>
+                                <option value="Caluroso">Caluroso</option>
+                                <option value="Frio">Frío</option>
+                                <option value="Templado">Templado</option>
+                                <option value="Nieve">Nieve</option>
+                                <option value="Lluvioso">Lluvioso</option>
+                                <option value="Seco">Seco</option>
+                                <option value="Cálido">Cálido</option>
+                                <option value="Tropical">Tropical</option>
+                                <option value="Húmedo">Húmedo</option>
+                                <option value="Soleado">Soleado</option>
+                                <option value="Fresco por las noches">Fresco por las noches</option>
+                                <option value="Moderado">Moderado</option>
+                                <option value="Variable">Variable</option>
+                                <option value="Fresco en altura">Fresco en altura</option>
+                                <option value="Cálido en el fondo">Cálido en el fondo</option>
+                                <option value="Semiárido">Semiárido</option>
+                            </select>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">event_available</i>
+                            <select class="season_select" name="season" required>
+                                <option value="" disabled selected>¿Cuándo piensas viajar?</option>
+                                <option value="Enero-Marzo">Enero-Marzo</option>
+                                <option value="Abril-Junio">Abril-Junio</option>
+                                <option value="Julio-Septiembre">Julio-Septiembre</option>
+                                <option value="Octubre-Diciembre">Octubre-Diciembre</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="search_btn_container">
-                    <button class="search_btn" type="submit">
-                        <span class="search_btn_span">Buscar<i class="material-icons prefix">send</i></span>
+                    <button class="search_btn pulse" type="submit">
+                        <span class="search_btn_span">Descubrir destinos <i class="material-icons">travel_explore</i></span>
                     </button>
+                </div>
+                
+                <div class="travel-tips">
+                    <p><i class="material-icons tiny">lightbulb</i> Tip: Para encontrar mejores resultados, selecciona el clima que más disfrutas.</p>
                 </div>
             </form>
         </div>

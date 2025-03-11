@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // data of origin
     var optionsOrigin = {
         data: {
-            "Chihuahua": '/static/img/low_quality/low_chihuahua.jpg',
+            "Chihuahua": null,
         }
     }
     // data of places to go
