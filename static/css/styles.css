@@ -199,13 +199,16 @@ p{
     background-color: #1e1e1e;
 }
 
+.card-action-a{
+    color: #ff796b;
+}
 /* Asegurar que las tarjetas en la misma fila tengan la misma altura */
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
-.col.s12.m4 {
+.col.s12.m6 {
     display: flex;
 }
 
