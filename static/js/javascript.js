@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // data of origin
     var optionsOrigin = {
         data: {
-            "Chihuahua": '/static/img/low_quality/low_chihuahua.jpg',
+            "Chihuahua": null,
         }
     }
     // data of places to go
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             "Playa": null,
             "Resort": null,
+            "Ciudad": null,
             "Ciudad turística": null,
             "Ciudad colonial": null,
             "Patrimonio UNESCO": null,
@@ -20,13 +21,39 @@ document.addEventListener('DOMContentLoaded', function () {
             "Área natural": null,
             "Parque nacional": null,
             "Destino artístico": null,
-            "Bahía": null,
-            "Zona arqueológica": null,
-            "Sitio histórico": null,
-            "Metrópoli": null,
+            "Bahía": null,            
+            "Sitio histórico": null,            
             "Centro cultural": null,
             "Pueblo mágico": null,
             "Pueblo minero": null,
+            "Metrópolis": null,
+            "Zona Arqueológica": null,
+            "Cascadas Petrificadas": null,
+            "Manantiales": null,
+            "Formación Natural": null,
+            "Canales": null,
+            "Patrimonio Mundial": null,
+            "Zona Natural": null,
+            "Pueblo Pesquero": null,
+            "Reserva de la Biosfera": null,
+            "Centro Minero": null,
+            "Cueva": null,
+            "Atracción Turística": null,
+            "Ruta Puuc": null,
+            "Parque de Aventura": null,
+            "Mirador": null,
+            "Caverna Submarina": null,
+            "Atracción Natural": null,
+            "Pueblo de Montaña": null,
+            "Sierra": null,
+            "Destino Ecoturístico": null,
+            "Pueblo Costero": null,
+            "Destino Surfista": null,
+            "Área Natural Protegida": null,
+            "Isla": null,
+            "Reserva Natural": null,
+            "Lagos": null,
+            "Centro Histórico": null,
         }
     }
     var origin_autocomplete = document.querySelectorAll('.origin_autocomplete');

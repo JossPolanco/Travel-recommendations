@@ -1,10 +1,73 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-<div class="place-container">
-    <h1 class="place-title">{{ place['name'] }}</h1>
-    <h2 class="place-weather">{{ place['weather'] }}</h2>    
-    <img src="{{ place['img']}}" alt="{{ place['name'] }}" class="place-image">
-    <p class="place-info">{{ place['information'] }}</p>
+<div class="content place-content">
+    <div class="content_span">
+        <div class="place_card">
+            <div class="place_header">
+                <div class="place_title">
+                    <h2>{{ place['name'] }}</h2>
+                </div>
+                <div class="place_quick_info">
+                    <div class="place_cost">
+                        <i class="material-icons">monetization_on</i>
+                        <span>${{ place['cost'] }} MXN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place_image_container">
+                <div class="place_image">
+                    <img src="/{{ place['img'] }}" alt="{{ place['name'] }}" class="responsive-img">                    
+                </div>
+            </div>
+
+            <div class="place_main_content">
+                <div class="place_tags">
+                    <div class="tag_item tag_weather">
+                        <i class="material-icons">wb_sunny</i>
+                        <div class="tag_content">
+                            <h5 class="tags_title">Clima</h5>
+                            <p class="tags_p">{{ place['weather'] }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tag_item tag_season">
+                        <i class="material-icons">event</i>
+                        <div class="tag_content">
+                            <h5 class="tags_title">Temporada ideal</h5>
+                            <p class="tags_p">{{ place['seasons'] }}</p>
+                        </div>
+                    </div>            
+                </div>
+
+                <div class="place_information">
+                    <div class="info_section">
+                        <h4><i class="material-icons">info</i> Información</h4>
+                        <div class="info_content">{{ place['information'] }}</div>
+                    </div>
+                    
+                    <div class="info_section">
+                        <h4><i class="material-icons">star</i> Recomendaciones</h4>
+                        <div class="info_content">{{ place['recommendation'] }}</div>
+                    </div>
+                </div>
+                
+                <div class="location_section">
+                    <h4><i class="material-icons">place</i> Ubicación</h4>
+                    <div class="place_map">
+                        <div id="mapbox-token" data-token="{{ mapbox_token }}" hidden></div>
+                        {{ map }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="place_actions">
+                <a href="{{ url_for('index.index') }}" class="back-button">
+                    <i class="material-icons">arrow_back</i> Volver
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
