@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             "Playa": null,
             "Resort": null,
+            "Ciudad": null,
             "Ciudad turística": null,
             "Ciudad colonial": null,
             "Patrimonio UNESCO": null,
@@ -20,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "Área natural": null,
             "Parque nacional": null,
             "Destino artístico": null,
-            "Bahía": null,
-            "Zona arqueológica": null,
+            "Bahía": null,            
             "Sitio histórico": null,            
             "Centro cultural": null,
             "Pueblo mágico": null,

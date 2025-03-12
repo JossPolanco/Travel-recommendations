@@ -18,7 +18,7 @@
 
             <div class="place_image_container">
                 <div class="place_image">
-                    <img src="/static/img/places/bacalar.webp" alt="{{ place['name'] }}" class="responsive-img">
+                    <img src="/{{ place['img'] }}" alt="{{ place['name'] }}" class="responsive-img">                    
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
             
             <div class="place_actions">
                 <a href="{{ url_for('index.index') }}" class="back-button">
-                    <i class="material-icons">arrow_back</i> Volver a 
+                    <i class="material-icons">arrow_back</i> Volver
                 </a>
             </div>
         </div>
