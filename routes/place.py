@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, current_app
+from flask import Blueprint, render_template, current_app, jsonify
 from models.places_model import PlacesModel
 from mapkick.flask import Map
 
@@ -14,4 +14,5 @@ def go_place(place_id):
     
     map = Map([{'latitude': place['latitude'], 'longitude': place['longitude']}], zoom=4)
     # We render the page and pass it all data
-    return render_template("place.html", place=place, map=map, mapbox_token=current_app.config["MAPBOX_ACCESS_TOKEN"])
+    # return render_template("place.html", place=place, map=map, mapbox_token=current_app.config["MAPBOX_ACCESS_TOKEN"])
+    return jsonify(place, map, current_app.config["MAPBOX_ACCESS_TOKEN"])
