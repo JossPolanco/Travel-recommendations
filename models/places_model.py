@@ -41,7 +41,7 @@ class PlacesModel:
         finally:
             self.closeCursor()
     # Method to get all the places limited by a number
-    def get_places_limited(self, limit):
+    def get_places_by_limit(self, limit):
         try:
             self.openCursor()
             query = "SELECT * FROM places LIMIT %s"
