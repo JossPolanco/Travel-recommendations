@@ -7,10 +7,8 @@ def init_db(app):
     app.config['MYSQL_HOST'] = 'localhost'
     app.config['MYSQL_USER'] = 'root'
     app.config['MYSQL_PASSWORD'] = ''
-    app.config['MYSQL_DB'] = 'travel_recomendation'
-    app.config['MYSQL_PORT'] = 3306    
-    app.config['MYSQL_POOL_SIZE'] = 5  # Número de conexiones en el pool
-    app.config['MYSQL_POOL_NAME'] = 'mypool'
+    app.config['MYSQL_DB'] = 'travel_recommendations'
+    app.config['MYSQL_PORT'] = 3306  
     
     mysql.init_app(app)
     app.mysql = mysql  
