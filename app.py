@@ -1,6 +1,6 @@
 from flask import Flask
 from config.db import init_db
-from routes import search, place, views, api
+from routes import views, api
 from mapkick.flask import mapkick_blueprint
 from dotenv import load_dotenv
 import os
@@ -14,8 +14,6 @@ app.config['MAPBOX_ACCESS_TOKEN'] = os.getenv('MAPBOX_ACCESS_TOKEN')
 
 app.register_blueprint(mapkick_blueprint)
 app.register_blueprint(views.bp)
-app.register_blueprint(search.bp)
-app.register_blueprint(place.bp)
 app.register_blueprint(api.bp)
 
 

@@ -6,19 +6,19 @@
         <div class="place_card">
             <div class="place_header">
                 <div class="place_title">
-                    <h2>{{ place['name'] }}</h2>
+                    <h2>{{ place[1] }}</h2>
                 </div>
                 <div class="place_quick_info">
                     <div class="place_cost">
                         <i class="material-icons">monetization_on</i>
-                        <span>${{ place['cost'] }} MXN</span>
+                        <span>${{ place[4] }} MXN</span>
                     </div>
                 </div>
             </div>
 
             <div class="place_image_container">
                 <div class="place_image">
-                    <img src="/{{ place['img'] }}" alt="{{ place['name'] }}" class="responsive-img">                    
+                    <img src="/{{ place[12] }}" alt="{{ place[1] }}" class="responsive-img">                    
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                         <i class="material-icons">wb_sunny</i>
                         <div class="tag_content">
                             <h5 class="tags_title">Clima</h5>
-                            <p class="tags_p">{{ place['weather'] }}</p>
+                            <p class="tags_p">{{ place[5] }}</p>
                         </div>
                     </div>
                     
@@ -36,7 +36,7 @@
                         <i class="material-icons">event</i>
                         <div class="tag_content">
                             <h5 class="tags_title">Temporada ideal</h5>
-                            <p class="tags_p">{{ place['seasons'] }}</p>
+                            <p class="tags_p">{{ place[6] }}</p>
                         </div>
                     </div>            
                 </div>
@@ -44,12 +44,12 @@
                 <div class="place_information">
                     <div class="info_section">
                         <h4><i class="material-icons">info</i> Información</h4>
-                        <div class="info_content">{{ place['information'] }}</div>
+                        <div class="info_content">{{ place[7] }}</div>
                     </div>
                     
                     <div class="info_section">
                         <h4><i class="material-icons">star</i> Recomendaciones</h4>
-                        <div class="info_content">{{ place['recommendation'] }}</div>
+                        <div class="info_content">{{ place[8] }}</div>
                     </div>
                 </div>
                 

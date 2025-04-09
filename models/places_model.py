@@ -31,11 +31,8 @@ class PlacesModel:
             query = "SELECT * FROM places WHERE id = %s"
             values = (id,)
             self.cur.execute(query, values)
-            result = self.cur.fetchone()
-            if result:
-                columns = [col[0] for col in self.cur.description]
-                result = dict(zip(columns, result))
-            return result
+            
+            return self.cur.fetchone()
         except KeyError as e:
             print(f"Error: {e}.")
         finally:
@@ -58,13 +55,13 @@ class PlacesModel:
             # Query that calls a storaged procedure in the db and values to insert it like input in the storaged procedure
             query = "CALL prd_get_places(%s, %s, %s, %s, %s)"
             values = (place, distance, budget, weather, season)            
-            self.cur.execute(query, values)
-            result = self.cur.fetchall()                                    
+            self.cur.execute(query, values)                                             
             # Convert the result to a list of dictionaries
-            columns = [col[0] for col in self.cur.description] #.description bring info of each column, col[0] bring the name of each column and we create a list
-            result = [dict(zip(columns, row)) for row in result] #We iterate in each row, then we combine each row with columns creating key-value and converting it into a dict
+            # columns = [col[0] for col in self.cur.description] #.description bring info of each column, col[0] bring the name of each column and we create a list
+            # result = [dict(zip(columns, row)) for row in result] #We iterate in each row, then we combine each row with columns creating key-value and converting it into a dict
             # Returns all the data from the database
-            return result
+            print(type(self.cur.fetchone()))
+            return self.cur.fetchall()  
         except KeyError as e:
             print(f"Error: {e}")
         finally:
