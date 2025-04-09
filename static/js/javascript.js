@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     // data of origin
     var optionsOrigin = {
         data: {
@@ -99,5 +99,5 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     var instances = M.FormSelect.init(weather_select);
-    var instances = M.FormSelect.init(season_select);
-});
+    var instances = M.FormSelect.init(season_select);  
+})
